@@ -1,0 +1,242 @@
+@font-face {
+    font-family: marley;
+    src: url("../fonts/marley.otf");
+}
+
+:root {
+    --primary-color: #37375c;
+    --hover-color: #37375c;
+    --background-color: #dedee1;
+    --secondary-background-color: #ffffff;
+    --text-color: #232323;
+    --nav-link-color: #637fb6;
+    --nav-link-background: #dedee1;
+    --logout-button-color: #f9322c;
+    --logout-button-hover: #de2c26;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--text-color);
+    font-family: marley;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+/* Loader CSS */
+.loader {
+    border: 16px solid #a8a8a8; /* Light grey */
+    border-top: 16px solid var(--primary-color); /* Primary color */
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 16%;
+    left: 42%;
+    display: none; /* Hidden by default */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Overlay for the loader */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    background: var(--secondary-background-color);
+    display: block; /* Hidden by default */
+    z-index: 9999;
+}
+
+.container {
+    background-color: var(--secondary-background-color);
+    min-height: 650px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+}
+a{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--nav-link-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 80px;
+    height: auto;
+}
+
+.title {
+    font-size: 30px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.logout-button {
+    background-color: var(--logout-button-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+}
+
+.logout-button:hover {
+    background-color: var(--logout-button-hover);
+}
+
+.logout-button:active {
+    scale: 0.96;
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+table {
+    width: 100%;
+    border: 1px solid #000000; /* Add border to the table */
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #000000; /* Add border to the table */
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #b0b0b0;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+
+
+
+
+
+
+.validée {
+    color: #2dc937;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.refusée {
+    color: #cc3232;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.en_cours {
+    color: #be920e;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.approve-button ,.decline-button{
+    margin-top: 10px;
+    margin-left: 30px;
+    padding: 10px 10px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+
+
+}
+.approve-button{
+    background-color: rgba(45, 201, 55,0.9) ;
+    border-color: #2dc937;
+    margin-bottom: 15px;
+}
+.approve-button:hover {
+    background-color: #2dc937;
+}
+
+.approve-button:active {
+    scale: 0.96;
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.approve-button:disabled {
+    background-color: rgba(45, 201, 55,0.85);
+    cursor: not-allowed;
+}
+
+.decline-button{
+    background-color: rgba(204, 50, 50,0.9) ;
+    border-color: #cc3232;
+    float: right;
+    margin-left: 770px;
+}
+.decline-button:hover {
+    background-color: #cc3232;
+}
+.decline-button:active {
+    scale: 0.96;
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+.decline-button:disabled {
+    background-color: rgba(204, 50, 50,0.85);
+    cursor: not-allowed;
+}
+
+.forms{
+    display: flex;
+}
+
+.formaprov{
+    display: flex;
+    flex-direction: column;
+}
+
+.formaprov input[type="file"]{
+    margin-left: 40px;
+}
