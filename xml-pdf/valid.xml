@@ -1,0 +1,63 @@
+<business>
+  <details>
+    <name>ABC Enterprises</name>
+    <registrationNumber>123456789</registrationNumber>
+    <established>2001</established>
+    <website>www.abc-enterprises.com</website>
+  </details>
+  <address>
+    <street>456 Market Street</street>
+    <city>Sample City</city>
+    <state>Sample State</state>
+    <postalCode>12345</postalCode>
+    <country>Sample Country</country>
+  </address>
+  <contacts>
+    <contact type="office">
+      <phone>+123-456-7890</phone>
+      <email>office@abc-enterprises.com</email>
+    </contact>
+    <contact type="support">
+      <phone>+123-555-6789</phone>
+      <email>support@abc-enterprises.com</email>
+    </contact>
+    <contact type="sales">
+      <phone>+123-666-7890</phone>
+      <email>sales@abc-enterprises.com</email>
+    </contact>
+  </contacts>
+  <employees>
+    <employee id="1">
+      <name>John Doe</name>
+      <position>CEO</position>
+      <email>john.doe@abc-enterprises.com</email>
+      <phone>+123-111-2222</phone>
+    </employee>
+    <employee id="2">
+      <name>Jane Smith</name>
+      <position>Project Manager</position>
+      <email>jane.smith@abc-enterprises.com</email>
+      <phone>+123-333-4444</phone>
+    </employee>
+    <employee id="3">
+      <name>Mike Johnson</name>
+      <position>Developer</position>
+      <email>mike.johnson@abc-enterprises.com</email>
+      <phone>+123-555-6666</phone>
+    </employee>
+  </employees>
+  <services>
+    <service id="1">
+      <name>Consulting</name>
+      <description>Professional consulting services to help you plan and manage your projects.</description>
+    </service>
+    <service id="2">
+      <name>Design</name>
+      <description>Innovative design solutions to bring your vision to life.</description>
+    </service>
+    <service id="3">
+      <name>Marketing</name>
+      <description>Comprehensive marketing strategies to grow your business.</description>
+    </service>
+  </services>
+</business>
