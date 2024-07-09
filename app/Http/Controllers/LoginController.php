@@ -27,7 +27,7 @@ class LoginController extends Controller
 
             Auth::login($contribuable);
 
-            return redirect()->route('user.dashboard')->with('success', 'Password set successfully.');
+            return redirect()->route('user.dashboard')->with('success', 'Mot de passe défini avec succès.');
         }
 
 
