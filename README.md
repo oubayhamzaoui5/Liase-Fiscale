@@ -2,6 +2,14 @@
 
 Liase-Fiscale is a comprehensive web application designed to facilitate the management and submission of fiscal documents for businesses. This application provides a user-friendly interface for taxpayers to upload and track their fiscal declarations, and for administrators to manage and verify these submissions efficiently.
 
+
+<p align="center">
+    <img src="https://github.com/oubayhamzaoui5/Liase-Fiscale/assets/151577793/d6592d21-644d-4171-b52e-b26540a4fff8" width="400" alt="Project Screenshot">
+</p>
+
+
+
+
 ## Features
 
 - **User Authentication:** Secure login system with role-based access control for taxpayers and administrators.
