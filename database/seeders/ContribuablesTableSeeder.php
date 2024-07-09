@@ -26,5 +26,27 @@ class ContribuablesTableSeeder extends Seeder
                 'updated_at' => now(),
             ],
         ]);
+        DB::table('contribuables')->insert([
+            [
+                'matricule_fiscale' => '1012654G A M',
+                'raison_sociale' => 'KROMBERG & SCHUBERT TUNISIE',
+                'adresse' => '000 ZONE RT TABARKABEJA-NORD',
+                'password' => Hash::make('user'), // Make sure to hash passwords
+                'role' => 'user', // Set role as user
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+        DB::table('contribuables')->insert([
+            [
+                'matricule_fiscale' => 'admin',
+                'raison_sociale' => 'Admin Company',
+                'adresse' => 'admin',
+                'password' => Hash::make('admin'), // Make sure to hash passwords
+                'role' => 'admin', // Set role as user
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
     }
 }

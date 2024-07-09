@@ -20,6 +20,18 @@ class LoginController extends Controller
 
         $contribuable = Contribuable::where('matricule_fiscale', $credentials['matricule_fiscale'])->first();
 
+        if ($contribuable && is_null($contribuable->password)) {
+            // If password is null, set it for the first time
+            $contribuable->password = Hash::make($request->password);
+            $contribuable->save();
+
+            Auth::login($contribuable);
+
+            return redirect()->route('user.dashboard')->with('success', 'Password set successfully.');
+        }
+
+
+
         if ($contribuable && Hash::check($credentials['password'], $contribuable->password)) {
             Auth::login($contribuable);
             if ($contribuable->role == 'admin') {
