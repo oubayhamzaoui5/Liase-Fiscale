@@ -157,6 +157,18 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
+        function parseXML(xmlString) {
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+
+    const isValid = xmlDoc.getElementsByTagName("parsererror").length === 0;
+    return {
+        isValid: isValid,
+        xmlDoc: isValid ? xmlDoc : null,
+        error: isValid ? null : xmlDoc.getElementsByTagName("parsererror")[0].textContent
+    };
+}
+
         async function validate(event) {
             const file = event.target.files[0];
             const row = event.target.closest("tr");
@@ -170,12 +182,12 @@ document.addEventListener('DOMContentLoaded', function() {
             const xmlString = await file.text();
             const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+            const result = parseXML(xmlString);
 
             // Perform basic validation (for demonstration purposes)
-            const isValid = xmlDoc.documentElement.nodeName !== "parsererror";
 
             // Check validation result
-            if (isValid) {
+            if (result.isValid) {
                 validityCell.textContent = "✔";
                 validityCell.classList.remove("invalid");
                 validityCell.classList.add("valid");
